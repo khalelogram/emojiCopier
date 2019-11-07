@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<body>
+	<button class="btn btn-copy"> Copy this emoji
+		<div id="copied" style="display:none">Emoji Copied!</div>
+    </button>
+    <input id="copyEmoji" style="opacity: 0;" type="text"></input>
+
+    <script>
+    	var button = document.querySelector('button');
+        var copy = document.getElementById('copyEmoji');
+        var message = document.getElementById('copied');
+            
+
+
+        function emojiCopier(){
+            button.addEventListener('click', function(){
+                copy.select();
+                copy.setSelectionRange(0, 99999);
+                document.execCommand('copy');
+                message.classList.add('show');
+                setTimeout(function() { message.classList.remove('show'); }, 1500);
+            });
+        };
+
+        emojiCopier();
+
+    </script>
+</body>
+</html>
