@@ -1,8 +1,8 @@
 
   
-            button = document.querySelector('button');
-            copy = document.getElementById('copyEmoji');
-            message = document.getElementById('copied');
+            var button = document.querySelector('button');
+            var copy = document.getElementById('copyEmoji');
+            var message = document.getElementById('copied');
             
 
 
